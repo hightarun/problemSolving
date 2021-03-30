@@ -28,7 +28,7 @@ int main()
         {
             cin >> a[i];
         }
-        k %= n;               // k will change k is greater than n.
+        k %= n;               // k will change, if k is greater than n.
         rotateArray(a, n, k); //it will rotate the array with respect to the value of k.
     }
     return 0;
