@@ -24,6 +24,7 @@ public:
             }
             --i;
         }
+        // when m goes less than -0 and there is still elements in nums2 array
         while (n > 0)
         {
             nums1[i - 1] = nums2[n - 1];
@@ -36,9 +37,9 @@ public:
 int main()
 {
     Solution obj;
-    int m = 0, n = 1;
-    vector<int> nums1 = {0};
-    vector<int> nums2 = {1};
+    int m = 3, n = 3;
+    vector<int> nums1 = {4, 5, 6, 0, 0, 0};
+    vector<int> nums2 = {1, 2, 3};
     obj.merge(nums1, m, nums2, n);
     for (auto c : nums1)
     {
