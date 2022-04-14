@@ -1,4 +1,4 @@
-package lastStoneWeight;
+package leetcode.lastStoneWeight;
 
 import java.util.PriorityQueue;
 

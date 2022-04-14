@@ -1,4 +1,4 @@
-package topKfrequent;
+package leetcode.topKfrequent;
 
 import java.util.HashMap;
 import java.util.Map;

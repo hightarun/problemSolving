@@ -1,4 +1,4 @@
-package reverseString;
+package leetcode.reverseString;
 
 class Solution {
 	public void reverseString(char[] s) {

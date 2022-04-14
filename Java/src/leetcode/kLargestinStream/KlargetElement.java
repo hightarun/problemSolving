@@ -1,4 +1,4 @@
-package kLargestinStream;
+package leetcode.kLargestinStream;
 
 import java.util.PriorityQueue;
 

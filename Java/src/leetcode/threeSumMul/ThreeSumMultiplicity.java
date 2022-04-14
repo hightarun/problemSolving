@@ -1,4 +1,4 @@
-package threeSumMul;
+package leetcode.threeSumMul;
 
 import java.util.HashMap;
 import java.util.Map;

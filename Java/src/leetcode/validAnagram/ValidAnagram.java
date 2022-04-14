@@ -1,4 +1,4 @@
-package validAnagram;
+package leetcode.validAnagram;
 
 import java.util.HashMap;
 import java.util.Map;

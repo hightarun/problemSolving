@@ -1,4 +1,4 @@
-package threeSum;
+package leetcode.threeSum;
 
 import java.util.ArrayList;
 import java.util.Arrays;

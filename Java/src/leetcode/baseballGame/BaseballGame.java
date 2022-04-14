@@ -1,4 +1,4 @@
-package baseballGame;
+package leetcode.baseballGame;
 
 import java.util.Stack;
 

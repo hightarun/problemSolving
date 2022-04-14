@@ -1,4 +1,4 @@
-package reverseVowels;
+package leetcode.reverseVowels;
 
 import java.util.HashMap;
 import java.util.Map;
