@@ -1,26 +1,25 @@
 package leetcode.topKfrequent;
 
 import java.util.HashMap;
-import java.util.Map;
 import java.util.PriorityQueue;
 
 class Solution {
 	public int[] topKFrequent(int[] nums, int k) {
-		Map<Integer, Integer> map = new HashMap<>();
+		HashMap<Integer, Integer> map = new HashMap<>();
 		int[] res = new int[k];
-		for (int n : nums) {
-			if (map.containsKey(n)) {
-				map.put(n, map.get(n) + 1);
-			} else {
-				map.put(n, 1);
-			}
+		for (int i : nums) {
+			map.put(i, map.getOrDefault(i, 0) + 1);
 		}
 
-		PriorityQueue<Integer> maxheap = new PriorityQueue<>((a, b) -> map.get(b) - map.get(a));
+		// making maxheap using priority queue
+		PriorityQueue<Integer> maxheap = new PriorityQueue<>(k, (a, b) -> map.get(b) - map.get(a));
 
+		// adding key to maxheap -> it will compare value of this key for the priority
 		for (int key : map.keySet()) {
 			maxheap.add(key);
 		}
+		// getting the max value from maxheap by using poll to remove the root
+		// element(it heapifies again after removing)
 		for (int i = 0; i < k; i++) {
 			res[i] = maxheap.poll();
 		}
