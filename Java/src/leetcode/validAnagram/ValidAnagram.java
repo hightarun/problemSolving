@@ -6,28 +6,21 @@ import java.util.Map;
 class Solution {
 	public boolean isAnagram(String s, String t) {
 		Map<Character, Integer> map = new HashMap<>();
-		Map<Character, Integer> map2 = new HashMap<>();
+		Map<Character, Integer> map1 = new HashMap<>();
 
-		char[] schar = s.toCharArray();
-		char[] tchar = t.toCharArray();
-
-		for (char c : schar) {
-			if (map.containsKey(c)) {
-				map.put(c, map.get(c) + 1);
-			} else {
-				map.put(c, 1);
-			}
-		}
-		for (char c : tchar) {
-			if (map2.containsKey(c)) {
-				map2.put(c, map2.get(c) + 1);
-			} else {
-				map2.put(c, 1);
-			}
+		for (char i : s.toCharArray()) {
+			int freq = map.getOrDefault(i, 0);
+			map.put(i, freq + 1);
 		}
 
-		if (map.equals(map2))
+		for (char i : t.toCharArray()) {
+			int freq = map1.getOrDefault(i, 0);
+			map1.put(i, freq + 1);
+		}
+
+		if (map.equals(map1)) {
 			return true;
+		}
 		return false;
 	}
 }
